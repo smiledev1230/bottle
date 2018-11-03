@@ -197,344 +197,235 @@
 
                                 <div class="card-box">
 
-                                            <div class="tablehead">AUTHORIZATION CATEGORIES</div>
-                                            <small class="text-muted c-font-14">These are the authorization types for bottle usage. </small><br>
-<br>
+                                    <div class="tablehead">AUTHORIZATION CATEGORIES</div>
+                                    <small class="text-muted">These are the authorization types for bottle usage. </small><br><br>
+                                    <div class="radio  radio-custom">
 
-                                            <div class="radio  radio-custom">
+                                        <input type="radio" name="authorization_category" id="authorization_category" value="authorized_by_customer">
 
-                                                <input type="radio" name="authorization_category" id="authorization_category" value="authorized_by_customer">
+                                        <label for="authorization_category" class="authorized-customer">
 
-                                                <label for="authorization_category">
+                                            Authorized by Customer (okay to use)
 
-                                                    Authorized by Customer (okay to use)
+                                        </label>
 
-                                                </label>
+                                    </div>
 
-                                            </div>
+                                    <div class="radio radio-custom">
 
-                                            
+                                        <input type="radio" name="authorization_category" id="not_authorization_category" value="not_authorized_by_customer">
 
-                                            <div class="radio radio-custom">
+                                        <label for="not_authorization_category" class="authorized-customer">
 
-                                                <input type="radio" name="authorization_category" id="not_authorization_category" value="not_authorized_by_customer">
+                                            Not Authorized by Customer (do not use)
 
-                                                <label for="not_authorization_category">
+                                        </label>
 
-                                                    Not Authorized by Customer (do not use)
+                                    </div>
 
-                                                </label>
+                                    <div class="radio  radio-custom">
 
-                                            </div>
+                                        <input type="radio" name="authorization_category" id="in_process_okay_to_use" value="in_process_okay_to_use" checked>
 
-                                            <div class="radio  radio-custom">
+                                        <label for="in_process_okay_to_use" class="in-progress-customer">
 
-                                                <input type="radio" name="authorization_category" id="in_process_okay_to_use" value="in_process_okay_to_use" checked>
+                                            In Process to be Authorized by Customer (okay to use)
 
-                                                <label for="in_process_okay_to_use">
+                                        </label>
 
-                                                    In Process to be Authorized by Customer (okay to use)
+                                    </div>
+                                    <div class="radio  radio-custom">
 
-                                                </label>
+                                        <input type="radio" name="authorization_category" id="in_process_dont_use" value="in_process_dont_use" checked>
 
-                                            </div>
-                                            <div class="radio  radio-custom">
+                                        <label for="in_process_dont_use" class="in-progress-customer">
 
-                                                <input type="radio" name="authorization_category" id="in_process_dont_use" value="in_process_dont_use" checked>
+                                            In Process to be Authorized by Customer (okay to use)
 
-                                                <label for="in_process_dont_use">
+                                        </label>
 
-                                                    In Process to be Authorized by Customer (okay to use)
+                                    </div>
 
-                                                </label>
+                                    <div class="checkbox checkbox-primary">
 
-                                            </div>
+                                        <input id="pending_authorization_requested" type="checkbox" name="pending_authorization_requested" value='1'>
 
-                                            <div class="checkbox checkbox-primary">
+                                        <label for="pending_authorization_requested">Pending Authorization Requested
 
-                                                <input id="pending_authorization_requested" type="checkbox" name="pending_authorization_requested" value='1'>
+                                        </label>
 
-                                                <label for="pending_authorization_requested">Pending Authorization Requested
+                                    </div>
 
-                                                </label>
+                                    <div class="checkbox checkbox-primary">
 
-                                            </div>
+                                        <input id="authorized_by_marketing" type="checkbox" name="authorized_by_marketing" value='1'>
 
-                                            <div class="checkbox checkbox-primary">
+                                        <label for="authorized_by_marketing">
 
-                                                <input id="authorized_by_marketing" type="checkbox" name="authorized_by_marketing" value='1'>
+                                            Authorized by  Marketing
 
-                                                <label for="authorized_by_marketing">
+                                        </label>
 
-                                                    Authorized by  Marketing
+                                    </div>
 
-                                                </label>
+                                    <div class="checkbox checkbox-primary">
 
-                                            </div>
+                                        <input id="authorized_by_legal" type="checkbox" name="authorized_by_legal" value="1">
 
-                                            <div class="checkbox checkbox-primary">
+                                        <label for="authorized_by_legal">
 
-                                                <input id="authorized_by_legal" type="checkbox" name="authorized_by_legal" value="1">
+                                            Authorized by Legal 
 
-                                                <label for="authorized_by_legal">
+                                        </label>
 
-                                                    Authorized by Legal 
+                                    </div>
+                                    <?php if($_SESSION['role']=='super_admin'):?>
+                                        <div class="checkbox checkbox-primary">
 
-                                                </label>
+                                            <input id="provitionally_approved_by_super_admin" type="checkbox" name="provitionally_approved_by_super_admin" value="1">
 
-                                            </div>
-                                            <?php if($_SESSION['role']=='super_admin'):?>
-                                                <div class="checkbox checkbox-primary">
+                                            <label for="provitionally_approved_by_super_admin">
 
-                                                    <input id="provitionally_approved_by_super_admin" type="checkbox" name="provitionally_approved_by_super_admin" value="1">
+                                                Provitionally approved by Diego
 
-                                                    <label for="provitionally_approved_by_super_admin">
+                                            </label>
 
-                                                        Provitionally approved by Diego
+                                        </div>
+                                        <div class="checkbox checkbox-primary">
 
-                                                    </label>
+                                            <input id="not_provitionally_approved_by_super_admin" type="checkbox" name="not_provitionally_approved_by_super_admin" value="1">
 
-                                                </div>
-                                                <div class="checkbox checkbox-primary">
+                                            <label for="not_provitionally_approved_by_super_admin">
 
-                                                    <input id="not_provitionally_approved_by_super_admin" type="checkbox" name="not_provitionally_approved_by_super_admin" value="1">
+                                                Not Provitionally approved by Diego
 
-                                                    <label for="not_provitionally_approved_by_super_admin">
+                                            </label>
 
-                                                        Not Provitionally approved by Diego
-
-                                                    </label>
-
-                                                </div>
-                                            <?php endif;?>
+                                        </div>
+                                    <?php endif;?>
 
                                     </div>
 
                                 </div>
 
-                                
+                                <div class="col-sm-8">
+                                    <div class="card-box">
 
-                                <div class="col-sm-4">
+                                        <div class="tablehead">APPROVALS FOR MEDIA USAGE</div>
+                                        <small class="text-muted">Check all that apply. </small><br><br>
+                                        
+                                        <div class="radio  radio-custom">
 
-                                        <div class="card-box">
+                                            <input id="approve_all_confidential_category" name="approve_all_confidential_category" type="radio"  >
 
-                                                <h4>CONFIDENTIAL CATEGORY</h4>
+                                            <label for="approve_all_confidential_category" data-toggle="tooltip" data-placement="top" title="" data-original-title="Approve all (okay to use)">Approve all (okay to use)
+                                            </label>
 
-                                                <div class="checkbox checkbox-primary">
+                                        </div>
 
-                                                    <input id="approve_all_confidential_category" type="checkbox"  >
+                                        <div class="radio  radio-custom">
 
-                                                    <label for="approve_all_confidential_category" data-toggle="tooltip" data-placement="top" title="" data-original-title="Approve all categories  (it will check all the boxes)">APPROVE ALL
+                                            <input id="custom_confidential_category" name="approve_all_confidential_category" type="radio"  >
 
-                                                    </label>
+                                            <label for="custom_confidential_category" data-toggle="tooltip" data-placement="top" title="" data-original-title="Confidential (do not use)">Confidential (do not use)
+                                            </label>
 
-                                                </div>
+                                        </div>
 
+                                        <h4>CUSTOM APPROVALS</h4>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <small class="icon-20">Internal</small><br>
                                                 <div class="checkbox checkbox-primary">
 
                                                     <input id="confidential_internal_event_presentations" name="confidential_internal_event_presentations" type="checkbox" class="confidential_category" value="1">
-
-                                                    <label for="confidential_internal_event_presentations">Internal Event Presentations
-
+                                                    <label for="confidential_internal_event_presentations">Internal Event Presentations / Communications
                                                     </label>
 
                                                 </div>
-
-                                                <div class="checkbox checkbox-primary">
-
-                                                    <input id="confidential_external_event_and_expo_presentations" name="confidential_external_event_and_expo_presentations" type="checkbox" class="confidential_category" value="1">
-
-                                                    <label for="confidential_external_event_and_expo_presentations">
-
-                                                        External Event and Expo Presentations
-
-                                                    </label>
-
-                                                </div>
-
                                                 <div class="checkbox checkbox-primary">
 
                                                     <input id="confidential_capability_center_specific" name="confidential_capability_center_specific" type="checkbox" class="confidential_category" value="1">
-
-                                                    <label for="confidential_capability_center_specific">
-
-                                                        Capability Center Specific
-
+                                                    <label for="confidential_capability_center_specific">Capability Center Specific
                                                     </label>
 
                                                 </div>
-
                                                 <div class="checkbox checkbox-primary">
 
                                                     <input id="confidential_dmm_section_specific" name="confidential_dmm_section_specific" type="checkbox" class="confidential_category" value='1'>
-
-                                                    <label for="confidential_dmm_section_specific">
-
-                                                        DMM Section Specific
-
+                                                    <label for="confidential_dmm_section_specific">DMM Section Specific
                                                     </label>
 
                                                 </div>
-
                                                 <div class="checkbox checkbox-primary">
 
                                                     <input id="confidential_summer_meeting_specific" name="confidential_summer_meeting_specific" type="checkbox" class="confidential_category" value='1'>
-
-                                                    <label for="confidential_summer_meeting_specific">
-
-                                                        Summer Meeting Specific
-
+                                                    <label for="confidential_summer_meeting_specific">Summer Meeting Specific
                                                     </label>
 
                                                 </div>
-
                                                 <div class="checkbox checkbox-primary">
 
                                                     <input id="confidential_ctm_meeting_specific" name="confidential_ctm_meeting_specific" type="checkbox" class="confidential_category" value='1'>
-
-                                                    <label for="confidential_ctm_meeting_specific">
-
-                                                        CTM Meeting Specific
-
+                                                    <label for="confidential_ctm_meeting_specific">CTM Meeting Specific
                                                     </label>
 
                                                 </div>
 
                                                 <div class="checkbox checkbox-primary">
 
-                                                    <input id="confidential_other_meetings" name="confidential_other_meetings" type="checkbox" class="" value='1'>
-
-                                                    <label for="confidential_other_meetings">
-
-                                                            Other Meetings 
-
+                                                    <input id="confidential_other_meetings" name="confidential_other_meetings" type="checkbox" class="confidential_category" value='1'>
+                                                    <label for="confidential_other_meetings">Other Meetings 
                                                     </label>
 
                                                 </div>
-
-                                                <div>
-
-                                                    <input type="text" name="confidential_other_meetings_info" id="confidential_other_meetings_info" style="display:none;" placeholder="Other meetings info" class="form-control">
-
-                                                </div>
-
-                                        </div>
-
-                                    </div>
-
-                                    
-
-                                <div class="col-sm-4">
-
-                                        
-
-                                        <div class="card-box">
-
-                                                <h4>NON CONFIDENTIAL CATEGORY</h4>
-
                                                 <div class="checkbox checkbox-primary">
 
-                                                    <input id="approve_all_non_confidential_category" type="checkbox"  >
-
-                                                    <label for="approve_all_non_confidential_category" data-toggle="tooltip" data-placement="top" title="" data-original-title="Approve all categories  (it will check all the boxes)">APPROVE ALL
-
+                                                    <input id="print_media_brochures_posters" name="print_media_brochures_posters" type="checkbox" class="confidential_category" value='1'>
+                                                    <label for="print_media_brochures_posters">Print media (brochures, posters) 
                                                     </label>
 
                                                 </div>
-
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <small class="icon-20">External</small><br>
                                                 <div class="checkbox checkbox-primary">
 
-                                                    <input id="non_confidential_internal_event_presentations" name="non_confidential_internal_event_presentations" type="checkbox" class="non_confidential_category" value="1">
-
-                                                    <label for="non_confidential_internal_event_presentations">Internal Event Presentations / Communications
-
-                                                    </label>
-
-                                                </div>
-
-                                                <div class="checkbox checkbox-primary">
-
-                                                    <input id="non_confidential_external_event_and_expo_presentations" name="non_confidential_external_event_and_expo_presentations" type="checkbox" class="non_confidential_category" value="1">
-
-                                                    <label for="non_confidential_external_event_and_expo_presentations">
-
+                                                    <input id="confidential_external_event_and_expo_presentations" name="confidential_external_event_and_expo_presentations" type="checkbox" class="confidential_category" value="1">
+                                                    <label for="confidential_external_event_and_expo_presentations">
                                                         External Event and Expo Presentations / Communications
-
                                                     </label>
 
                                                 </div>
-
                                                 <div class="checkbox checkbox-primary">
 
-                                                    <input id="non_confidential_capability_center_specific" name="non_confidential_capability_center_specific" type="checkbox" class="non_confidential_category" value="1">
-
-                                                    <label for="non_confidential_capability_center_specific">
-
-                                                        Capability Center Specific
-
+                                                    <input id="external_meetings_with_customers" name="external_meetings_with_customers" type="checkbox" class="confidential_category" value="1">
+                                                    <label for="external_meetings_with_customers">
+                                                        External meetings with customers
                                                     </label>
 
                                                 </div>
-
                                                 <div class="checkbox checkbox-primary">
 
-                                                    <input id="non_confidential_dmm_section_specific" name="non_confidential_dmm_section_specific" type="checkbox" class="non_confidential_category" value='1'>
-
-                                                    <label for="non_confidential_dmm_section_specific">
-
-                                                        DMM Section Specific
-
+                                                    <input id="online_website_social_media" name="online_website_social_media" type="checkbox" class="confidential_category" value="1">
+                                                    <label for="online_website_social_media">
+                                                        Online (website, social media)
                                                     </label>
 
                                                 </div>
-
                                                 <div class="checkbox checkbox-primary">
 
-                                                    <input id="non_confidential_summer_meeting_specific" name="non_confidential_summer_meeting_specific" type="checkbox" class="non_confidential_category" value='1'>
-
-                                                    <label for="non_confidential_summer_meeting_specific">
-
-                                                        Summer Meeting Specific
-
+                                                    <input id="print_media_brochures_posters_ads" name="print_media_brochures_posters_ads" type="checkbox" class="confidential_category" value="1">
+                                                    <label for="print_media_brochures_posters_ads">
+                                                        Print Media (brochures, posters, magazine ads)
                                                     </label>
 
                                                 </div>
-
-                                                <div class="checkbox checkbox-primary">
-
-                                                    <input id="non_confidential_ctm_meeting_specific" name="non_confidential_ctm_meeting_specific" type="checkbox" class="non_confidential_category" value='1'>
-
-                                                    <label for="non_confidential_ctm_meeting_specific">
-
-                                                        CTM Meeting Specific
-
-                                                    </label>
-
-                                                </div>
-
-                                                <div class="checkbox checkbox-primary">
-
-                                                    <input id="non_confidential_other_meetings" name="non_confidential_other_meetings" type="checkbox" class="" value='1'>
-
-                                                    <label for="non_confidential_other_meetings">
-
-                                                            Other Meetings 
-
-                                                    </label>
-
-                                                </div>
-
-                                                <div>
-
-                                                    <input type="text" name="non_confidential_other_meetings_info" id="non_confidential_other_meetings_info" style="display:none;" placeholder="Other meeting info" class="form-control">
-
-                                                </div>
-
+                                            </div>
                                         </div>
-
                                     </div>
 
-                                    
+                                </div>                                   
 
                         </div>
 

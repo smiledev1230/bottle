@@ -217,12 +217,12 @@
                                 <div class="card-box">
 
                                             <h4>AUTHORIZATION CATEGORIES</h4>
-
+                                            <small class="text-muted">These are the authorization types for bottle usage. </small><br>
                                             <div class="radio  radio-custom">
 
                                                 <input type="radio" name="authorization_category" id="authorization_category" value="authorized_by_customer" <?php if(@$authorization->status=='authorized_by_customer'){ echo 'checked';}?>>
 
-                                                <label for="authorization_category">
+                                                <label for="authorization_category" class="authorized-customer">
 
                                                     Authorized by Customer (okay to use)
 
@@ -236,7 +236,7 @@
 
                                                 <input type="radio" name="authorization_category" id="not_authorization_category" value="not_authorized_by_customer" <?php if(@$authorization->status=='not_authorized_by_customer'){ echo 'checked';}?>>
 
-                                                <label for="not_authorization_category">
+                                                <label for="not_authorization_category" class="authorized-customer">
 
                                                     Not Authorized by Customer (do not use)
 
@@ -248,7 +248,7 @@
 
                                                 <input type="radio" name="authorization_category" id="in_process_okay_to_use" value="in_process_okay_to_use"  <?php if(@$authorization->status=='in_process_okay_to_use'){ echo 'checked';}?>>
 
-                                                <label for="in_process_okay_to_use">
+                                                <label for="in_process_okay_to_use" class="in-progress-customer">
 
                                                     In Process to be Authorized by Customer (okay to use)
 
@@ -259,7 +259,7 @@
 
                                                 <input type="radio" name="authorization_category" id="in_process_dont_use" value="in_process_dont_use"  <?php if(@$authorization->status=='in_process_dont_use'){ echo 'checked';}?>>
 
-                                                <label for="in_process_dont_use">
+                                                <label for="in_process_dont_use" class="in-progress-customer">
 
                                                     In Process to be Authorized by Customer (okay to use)
 
