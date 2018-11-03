@@ -1,0 +1,13 @@
+Options -Indexes
+
+# Activate url rewriting module.
+RewriteEngine on
+
+RewriteCond $1 !^(index\.php|assets/|uploads/|robots\.txt)
+RewriteRule ^(.*)$ index.php/$1 [L]
+
+AuthType Basic
+AuthName "My Protected Area"
+AuthUserFile  /home/fm0omky9ojw2/public_html/bottles/.htpasswd
+Require valid-user
+

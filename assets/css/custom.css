@@ -1,0 +1,385 @@
+body{font-size:1.0rem}
+
+.admindashboard {
+
+    background-color: #727272;
+
+}
+.card-box.tilebox-one a.waves-effect {
+  max-height: 150px;
+  height: 40vh;
+}
+.card-box img{
+    max-height:150px;
+    clear: both;
+    display: block;
+    margin: 0 auto;
+}
+.card-box .text-muted {
+  min-height: 40px;
+}
+.c-font-14{font-size:14px!important}
+.tablehead{
+    font-size: 1.5rem;
+	font-weight: 500;
+    line-height: 1.2;
+	}
+.modal-demo {
+
+    background-color: #d7e5f1;
+
+}
+
+.previewtable td, .previewtable th {
+
+    padding: 1px!important;
+
+    font-size: 0.8rem;
+
+    padding-left: 10px!important;
+
+    padding-top: 5px!important;
+
+}
+
+.row.equal-cols {
+
+    display: -webkit-flex;
+
+    display: -ms-flexbox;
+
+    display: flex;
+
+    -webkit-flex-wrap: wrap;
+
+    -ms-flex-wrap: wrap;
+
+    flex-wrap: wrap;
+
+  }
+
+.admintheme{ background-color: #E84B44!important;}
+
+.icon-20{font-size:18px!important}
+
+.wrapper-page.registerwrapper{max-width:800px!important}
+
+  .row.equal-cols:before,
+
+  .row.equal-cols:after {
+
+    display: block;
+
+  }
+
+  
+
+  .row.equal-cols > [class*='col-'] {
+
+    display: -webkit-flex;
+
+    display: -ms-flexbox;
+
+    display: flex;
+
+    -webkit-flex-direction: column;
+
+    -ms-flex-direction: column;
+
+    flex-direction: column;
+
+  }
+
+  
+
+  .row.equal-cols > [class*='col-'] > * {
+
+    -webkit-flex: 1 1 auto;
+
+    -ms-flex: 1 1 auto;
+
+    flex: 1 1 auto; 
+
+  }
+
+  .alert-info {
+
+    background-color: #e3e3e3;
+
+    border-color: #009bdb;
+
+    color: #000000;
+
+}
+
+.custombox-modal-container.custombox-modal-container-fadein{width:90%!important}
+
+.smalldemo{width:600px!important;margin:0 auto}
+
+.bottle-notes{
+
+  background: #f5f5f5;
+
+  border:0px;
+
+  color: #000;
+
+}
+
+
+
+.custom-categories{
+
+  font-size: 0.9rem;
+
+}
+
+
+
+.preview-bottle h4{
+
+  font-size: 1.4rem;
+
+ }
+
+
+
+.preview-bottle{
+
+  font-size: 0.8 rem;
+
+}
+
+span.editlink {
+
+    vertical-align: middle;
+
+    font-size: 30px;
+
+}
+
+.red{color:red}
+
+.green{color:green}
+
+.frame {  
+
+    height: 100%; /*can be anything*/
+
+    width: 100%; /*can be anything*/
+
+    position: relative;
+
+}
+
+.imgthumb {  
+
+    max-height: 100%;  
+
+    max-width: 100%; 
+
+    width: auto;
+
+    height: auto;
+
+    position: absolute;  
+
+    top: 0;  
+
+    bottom: 0;  
+
+    left: 0;  
+
+    right: 0;  
+
+    margin: auto;
+
+}
+
+.dropify-wrapper .dropify-preview .dropify-render img {
+    display: initial;
+}
+
+/* small screens  
+
+@media (max-width: 767px) {
+
+
+
+}
+
+  eof small screens */
+
+
+
+  /* custom tooltip */
+
+
+
+.custom-tooltip a{
+
+  color: #000;
+
+}
+
+
+
+.custom-tooltip [data-tooltip] {
+
+  position: relative;
+
+  z-index: 2;
+
+  cursor: pointer;
+
+}
+
+
+
+/* Hide the tooltip content by default */
+
+.custom-tooltip [data-tooltip]:before,
+
+.custom-tooltip [data-tooltip]:after {
+
+  visibility: hidden;
+
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+
+  opacity: 0;
+
+  pointer-events: none;
+
+}
+
+
+
+/* Position tooltip above the element */
+
+.custom-tooltip [data-tooltip]:before {
+
+  position: absolute;
+
+  bottom: 150%;
+
+  left: 50%;
+
+  margin-bottom: 5px;
+
+  margin-left: -80px;
+
+  padding: 7px;
+
+  width: 160px;
+
+  -webkit-border-radius: 3px;
+
+  -moz-border-radius: 3px;
+
+  border-radius: 3px;
+
+  background-color: #000;
+
+  background-color: hsla(0, 0%, 20%, 0.9);
+
+  color: #fff;
+
+  content: attr(data-tooltip);
+
+  text-align: center;
+
+  font-size: 14px;
+
+  line-height: 1.2;
+
+}
+
+
+
+/* Triangle hack to make tooltip look like a speech bubble */
+
+.custom-tooltip [data-tooltip]:after {
+
+  position: absolute;
+
+  bottom: 150%;
+
+  left: 50%;
+
+  margin-left: -5px;
+
+  width: 0;
+
+  border-top: 5px solid #000;
+
+  border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+
+  border-right: 5px solid transparent;
+
+  border-left: 5px solid transparent;
+
+  content: " ";
+
+  font-size: 0;
+
+  line-height: 0;
+
+}
+
+
+
+/* Show tooltip content on hover */
+
+.custom-tooltip [data-tooltip]:hover:before,
+
+.custom-tooltip [data-tooltip]:hover:after {
+
+  visibility: visible;
+
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+
+  opacity: 1;
+
+}
+
+  /* eof custom tooltip */
+
+
+
+  /* employee */
+
+
+
+.box-employee{
+
+  text-align: center;
+
+}
+
+
+
+.employee-img{
+
+  border-radius: 50%;
+
+  max-width: 76%;
+
+  height: auto;
+
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.06), 0 1px 0 0 rgba(0, 0, 0, 0.02);
+
+}
+
+  /* eof employee */
+
+
+
+  .custom-control-label.admin::before{
+
+    background-color:#64b0f2
+
+}
