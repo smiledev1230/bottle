@@ -40,6 +40,8 @@
 
                                         <strong>On-Site Manufacturing Site:</strong> <?php echo $image->onsite_manufacturing_site;?><br>
 
+                                        <strong>Customer:</strong> <?php echo $image->image_customer;?><br>
+
                                         <strong>Market Global Location:</strong> <?php echo $image->market_global_location;?><br>
 
                                         <?php if(!empty($image->additional_info)):?>

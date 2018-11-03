@@ -131,6 +131,17 @@
 
                                     <div class="form-group row">
 
+                                        <label for="image_customer" class="col-3 col-form-label">Customer: <small class="text-muted">(optional)</small></label> 
+
+                                        <div class="col-9">
+
+                                            <input class="form-control" type="text" value="" id="image_customer" name="image_customer">                                        
+                                        </div>
+
+                                    </div>
+
+                                    <div class="form-group row">
+
                                         <label for="market_global_location" class="col-3 col-form-label">Market Global Location: <small class="text-muted">(optional)</small></label> <div class="col-9">
 
                                             <input class="form-control" type="text" value="" id="market_global_location" name="market_global_location">

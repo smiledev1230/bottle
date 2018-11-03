@@ -366,6 +366,8 @@ class Image_model extends CI_Model{
 
             'onsite_manufacturing_site' => $data['onsite_manufacturing_site'],
 
+            'image_customer' => $data['image_customer'],
+
             'market_global_location' => $data['market_global_location'],
 
             'filename' => $data['file_name'],
@@ -512,6 +514,8 @@ class Image_model extends CI_Model{
             'plastipak_manufacturing_site' => $data['plastipak_manufacturing_site'],
 
             'onsite_manufacturing_site' => $data['onsite_manufacturing_site'],
+
+            'image_customer' => $data['image_customer'],
 
             'market_global_location' => $data['market_global_location'],
 

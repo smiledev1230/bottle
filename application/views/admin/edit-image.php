@@ -158,7 +158,19 @@
 
                                         <div class="col-9">
 
-                                            <input class="form-control" type="text" value="<?php echo $image->onsite_manufacturing_site;?>" id="onsite_manufacturing_site" name="onsite_manufacturing_site">                                        
+                                            <input class="form-control" type="text" value="<?php echo $image->onsite_manufacturing_site;?>" id="onsite_manufacturing_site" name="onsite_manufacturing_site">     
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="form-group row">
+
+                                        <label for="image_customer" class="col-3 col-form-label">Customer: <small class="text-muted">(optional)</small></label> 
+
+                                        <div class="col-9">
+
+                                            <input class="form-control" type="text" value="<?php echo $image->image_customer;?>" id="image_customer" name="image_customer"> 
 
                                         </div>
 
@@ -827,6 +839,7 @@
         var bottle_specs = $("#bottle_specs").val();
         var plastipak_manufacturing_site = $("#plastipak_manufacturing_site").val();
         var onsite_manufacturing_site = $("#onsite_manufacturing_site").val();
+        var image_customer = $("#image_customer").val();
         var market_global_location = $("#market_global_location").val();
         var additional_info = $("#additional_info").val();
         var market_served = $("#market_served").val();
@@ -954,6 +967,7 @@
             bottle_specs:bottle_specs,
             plastipak_manufacturing_site : plastipak_manufacturing_site,
             onsite_manufacturing_site : onsite_manufacturing_site,
+            image_customer : image_customer,
             market_global_location : market_global_location,
             additional_info : additional_info,
             market_served:market_served,
