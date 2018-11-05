@@ -193,7 +193,7 @@
 
                         <div class="row equal-cols custom-categories">
 
-                            <div class="col-sm-4">
+                            <div class="col-md-4">
 
                                 <div class="card-box">
 
@@ -309,7 +309,7 @@
 
                                 </div>
 
-                                <div class="col-sm-8">
+                                <div class="col-md-8">
                                     <div class="card-box">
 
                                         <div class="tablehead">APPROVALS FOR MEDIA USAGE</div>

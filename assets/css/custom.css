@@ -254,3 +254,16 @@ span.editlink {
     background-color:#64b0f2
 }
 
+/* image page style */
+.radio.radio-custom label, .checkbox.checkbox-primary label {
+    padding-left: 25px;
+}
+.radio.radio-custom label:before,
+  .radio.radio-custom label:after,
+  .checkbox.checkbox-primary label::before,
+  .checkbox.checkbox-primary label::after {
+    margin-left: 0px;
+}
+.radio.radio-custom input[type="radio"], .checkbox.checkbox-primary input[type="checkbox"] {
+    position: absolute;
+}
