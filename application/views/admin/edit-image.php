@@ -44,36 +44,6 @@
 
                         </div>
 
-
-
-                        <div class="row">
-
-                            <div class="col-12">
-
-                                <div class="alert alert-info alert-dismissible fade show" role="alert">
-
-                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-
-                                        <span aria-hidden="true">×</span>
-
-                                    </button>
-
-                                    <p>
-
-                                        <b>NOTE 1:</b> As part of the administration team for bottle usage approval, intellectual property, and other visuals, in all media and mediums, please select the proper category for the displayed bottle. Add notes if required.<br>
-<br>
-
-
-                                       <b>NOTE 2:</b> Approved bottles are items that can be used in our videos, brochures, signage with/without the public, with/without customers/affiliations/non-profit/community, with/without restrictions, are considered stipulations for the approval of each category to publish our bottles. You, as part of the administration team, must specify on the notes, if any of the bottles have restrictions or need detail notes for publishing.
-
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
                         <form action="<?php echo base_url().'image/update_image' ?>" method="post" enctype="multipart/form-data" id="image-edit-form">
 
                         <input type="hidden" id="id" name="id" value="<?php echo $image->ID;?>">
@@ -206,6 +176,29 @@
 
                         <!-- image upload section -->
 
+                        <div class="row">
+
+                            <div class="col-12">
+
+                                <div class="alert alert-info alert-dismissible fade show" role="alert">
+
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+
+                                        <span aria-hidden="true">×</span>
+
+                                    </button>
+
+                                    <p>
+
+                                        <b>NOTE 1:</b> As part of the administrative team for bottle usage approval, intellectual property, and other visuals in all media and mediums, please select the applicable approvals for the displayed bottle.(delete "add notes if required)
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
 
 
                         <!-- categories section -->
@@ -296,7 +289,7 @@
 
                                             <label for="provitionally_approved_by_super_admin">
 
-                                                Provitionally approved by Diego
+                                                Provisionally approved by the Marketing and Communications Department
 
                                             </label>
 
@@ -307,7 +300,7 @@
 
                                             <label for="not_provitionally_approved_by_super_admin">
 
-                                                Not Provitionally approved by Diego
+                                                Not provisionally approved by the Marketing and Communications Department
 
                                             </label>
 
@@ -447,6 +440,28 @@
                         </div>
 
                         <!-- categories section -->
+
+                        <div class="row">
+
+                            <div class="col-12">
+
+                                <div class="alert alert-info alert-dismissible fade show" role="alert">
+
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+
+                                        <span aria-hidden="true">×</span>
+
+                                    </button>
+
+                                    <p>
+                                       <b>NOTE 2:</b> Approved bottles are items that can be used in our videos, brochures, and signage with/without the public, with/without customers/affiliations/non-profit/community, and with/without restrictions which are considered stipulations for the approval of each category. You, as part of the administrative team, must specify in the notes if any of the bottles have restrictions or need detailed notes for publishing.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
 
                         <div class="row">
 
