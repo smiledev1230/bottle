@@ -30,7 +30,7 @@
 
                                 <div class="page-title-box">
 
-                                    <h4 class="page-title float-left">Bottle Administration</h4>
+                                    <h4 class="page-title float-left">Bottle Administration | Manage bottle information and authorization here.</h4>
 
 
 
@@ -468,7 +468,7 @@
 
                                     <h4>Contact Administrator Team</h4>
 
-                                    <small>Check the checkbox next to the Administrator name that you want to contact, then click the "Contact" button to contact them.</small>
+                                    <small>Select the Administrator you wish to contact. Then click on the "Contact" button.</small>
 
                                         <table class="table table-striped m-t-20">
 
@@ -522,7 +522,12 @@
 
                                                         <td><?php echo $user->Email;?></td>
 
-                                                        <td><?php echo $user->Phone;?></td>
+                                                        <td>
+                                                        <?php
+                                                            $numbers_only = preg_replace("/[^\d]/", "", $user->Phone);
+                                                            echo preg_replace("/^1?(\d{3})(\d{3})(\d{4})$/", "$1-$2-$3", $numbers_only);
+                                                        ?>
+                                                        </td>
 
                                                     
 

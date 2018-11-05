@@ -76,7 +76,7 @@
 
                                             <div class="col-md-12">
 
-                                                <h3> New Password</h3>
+                                                <h3> Change Password</h3>
 
                                                 <hr>
 
@@ -96,7 +96,7 @@
 
                                         <div class="form-group row">
 
-                                            <label for="Password" class="col-3 col-form-label">Password: </label> <div class="col-9">
+                                            <label for="Password" class="col-3 col-form-label">New Password: </label> <div class="col-9">
 
                                                 <input class="form-control" type="password"  id="Password" name="Password" value="<?php echo @$_POST['Password'];?>"   required>
 
