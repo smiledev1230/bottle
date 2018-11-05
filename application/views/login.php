@@ -80,7 +80,7 @@
 
                             <div class="col-12 text-center">
 
-                                <h6 class="text-muted text-uppercase m-b-0 m-t-0">ADMIN LOGIN</h6>
+                                <h6 class="text-muted text-uppercase m-b-0 m-t-0">Administrator Login</h6>
 
                             </div>
 

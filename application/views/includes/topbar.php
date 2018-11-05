@@ -41,7 +41,7 @@
 
                                     <div class="dropdown-item noti-title">
 
-                                        <h5 class="text-overflow"><small>Welcome ! <?php echo $_SESSION['first_name'];?></small> </h5>
+                                        <h5 class="text-overflow"><small>Welcome, <?php echo $_SESSION['first_name'];?>!</small> </h5>
 
                                     </div>
 
