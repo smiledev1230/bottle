@@ -354,7 +354,7 @@
                                                 <div class="checkbox checkbox-primary">
 
                                                     <input id="confidential_dmm_section_specific" name="confidential_dmm_section_specific" type="checkbox" class="confidential_category" value='1'>
-                                                    <label for="confidential_dmm_section_specific">DMM Section Specific
+                                                    <label for="confidential_dmm_section_specific">DMM Specific
                                                     </label>
 
                                                 </div>
@@ -375,18 +375,26 @@
 
                                                 <div class="checkbox checkbox-primary">
 
+                                                    <input id="print_media_brochures_posters" name="print_media_brochures_posters" type="checkbox" class="confidential_category" value='1'>
+                                                    <label for="print_media_brochures_posters">Print Media (brochures, posters) 
+                                                    </label>
+
+                                                </div>
+
+                                                <div class="checkbox checkbox-primary">
+
                                                     <input id="confidential_other_meetings" name="confidential_other_meetings" type="checkbox" class="confidential_category" value='1'>
                                                     <label for="confidential_other_meetings">Other Meetings 
                                                     </label>
 
                                                 </div>
-                                                <div class="checkbox checkbox-primary">
 
-                                                    <input id="print_media_brochures_posters" name="print_media_brochures_posters" type="checkbox" class="confidential_category" value='1'>
-                                                    <label for="print_media_brochures_posters">Print media (brochures, posters) 
-                                                    </label>
+                                                <div>
+
+                                                    <input type="text" value="<?php echo @$confidential->other_meetings_info;?>" name="confidential_other_meetings_info" id="confidential_other_meetings_info" <?php if(@$confidential->other_meetings!='1'){ echo 'style="display:none;"';}?> placeholder="Other meetings info"  class="form-control">
 
                                                 </div>
+
                                             </div>
                                             <div class="col-sm-6">
                                                 <div class="icon-20" style="padding-bottom:10px;font-weight:500">EXTERNAL</div>
@@ -402,7 +410,7 @@
 
                                                     <input id="external_meetings_with_customers" name="external_meetings_with_customers" type="checkbox" class="confidential_category" value="1">
                                                     <label for="external_meetings_with_customers">
-                                                        External meetings with customers
+                                                        External Meetings with Customers
                                                     </label>
 
                                                 </div>
@@ -531,135 +539,51 @@
 
 <script>
 
-	 $("#confidential_internal_event_presentations").on("click",function(){
-		$( "#approve_all_confidential_category" ).prop( "checked", false );
-		$( "#custom_confidential_category" ).prop( "checked", false );
-    });
-	 $("#confidential_capability_center_specific").on("click",function(){
-		$( "#approve_all_confidential_category" ).prop( "checked", false );
-		$( "#custom_confidential_category" ).prop( "checked", false );
-    });
-	 $("#confidential_dmm_section_specific").on("click",function(){
-		$( "#approve_all_confidential_category" ).prop( "checked", false );
-		$( "#custom_confidential_category" ).prop( "checked", false );
-    });
-	 $("#confidential_summer_meeting_specific").on("click",function(){
-		$( "#approve_all_confidential_category" ).prop( "checked", false );
-		$( "#custom_confidential_category" ).prop( "checked", false );
-    });
-	 $("#confidential_ctm_meeting_specific").on("click",function(){
-		$( "#approve_all_confidential_category" ).prop( "checked", false );
-		$( "#custom_confidential_category" ).prop( "checked", false );
-    });
-	 $("#confidential_other_meetings").on("click",function(){
-		$( "#approve_all_confidential_category" ).prop( "checked", false );
-		$( "#custom_confidential_category" ).prop( "checked", false );
-    });
-	 $("#print_media_brochures_posters").on("click",function(){
-		$( "#approve_all_confidential_category" ).prop( "checked", false );
-		$( "#custom_confidential_category" ).prop( "checked", false );
-    });
-	 $("#confidential_external_event_and_expo_presentations").on("click",function(){
-		$( "#approve_all_confidential_category" ).prop( "checked", false );
-		$( "#custom_confidential_category" ).prop( "checked", false );
-    });
-	 $("#external_meetings_with_customers").on("click",function(){
-		$( "#approve_all_confidential_category" ).prop( "checked", false );
-		$( "#custom_confidential_category" ).prop( "checked", false );
-    });
-	 $("#online_website_social_media").on("click",function(){
-		$( "#approve_all_confidential_category" ).prop( "checked", false );
-		$( "#custom_confidential_category" ).prop( "checked", false );
-    });
-	 $("#print_media_brochures_posters_ads").on("click",function(){
+	 $("#confidential_internal_event_presentations, #confidential_capability_center_specific, #confidential_dmm_section_specific, #confidential_summer_meeting_specific, #confidential_ctm_meeting_specific, #confidential_other_meetings, #print_media_brochures_posters, #confidential_external_event_and_expo_presentations, #external_meetings_with_customers, #online_website_social_media, #print_media_brochures_posters_ads").on("click",function(){
 		$( "#approve_all_confidential_category" ).prop( "checked", false );
 		$( "#custom_confidential_category" ).prop( "checked", false );
     });
 	
     $("#approve_all_confidential_category").on("click",function(){
-
         var fields = $(".confidential_category");
-
         if($(this).is(":checked")){
-
-            
-
             $.each(fields, function(key,val){
-
                 $(val).prop('checked',true);
-
             });
-
-        }
-
-        else{
-
+            $("#confidential_other_meetings_info").show();
+        } else{
             $.each(fields, function(key,val){
-
                 $(val).prop('checked',false);;
-
             });
-
+            $("#confidential_other_meetings_info").hide();
         }
-
     });
 	
 	$("#custom_confidential_category").on("click",function(){
-
         var fields = $(".confidential_category");
-
         if($(this).is(":checked")){
-
-            
-
             $.each(fields, function(key,val){
-
                 $(val).prop('checked',false);
-
             });
-
-        }
-
-        else{
-
+            $("#confidential_other_meetings_info").hide();
+        } else{
             $.each(fields, function(key,val){
-
                 $(val).prop('checked',true);;
-
             });
-
+            $("#confidential_other_meetings_info").show();
         }
-
     });
 
     $("#approve_all_non_confidential_category").on("click",function(){
-
         var fields = $(".non_confidential_category");
-
         if($(this).is(":checked")){
-
-            
-
             $.each(fields, function(key,val){
-
                 $(val).prop('checked',true);
-
             });
-
-        }
-
-        else{
-
+        } else{
             $.each(fields, function(key,val){
-
                 $(val).prop('checked',false);;
-
             });
-
         }
-
     });
-
-    
-
 </script>
