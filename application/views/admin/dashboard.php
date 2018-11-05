@@ -30,9 +30,9 @@
 
                     <div class="container-fluid">
 
-                            <div class="card-box tilebox-one">
+                            <div class="tilebox-one">
 
-                                <div class="row m-b-20">
+                                <div class="row">
 
                                     <div class="col-sm-12">
 

@@ -30,7 +30,7 @@
 
                                 <div class="page-title-box">
 
-                                    <h4 class="page-title float-left">Upload Image</h4>
+                                    <h4 class="page-title float-left">Upload Image | Upload bottle images and info here</h4>
 
                                     <div class="clearfix"></div>
 
@@ -73,7 +73,7 @@
 
                                     <div class="form-group row">
 
-                                        <label for="bottle_specs" class="col-3 col-form-label">Bottle Specs:</label> <div class="col-9">
+                                        <label for="bottle_specs" class="col-3 col-form-label">Bottle Specifications:</label> <div class="col-9">
 
                                             <input class="form-control" type="text" value="" id="bottle_specs" name="bottle_specs">
 
@@ -142,7 +142,7 @@
 
                                     <div class="form-group row">
 
-                                        <label for="market_global_location" class="col-3 col-form-label">Market Global Location: <small class="text-muted">(optional)</small></label> <div class="col-9">
+                                        <label for="market_global_location" class="col-3 col-form-label">Global Location of Market: <small class="text-muted">(optional)</small></label> <div class="col-9">
 
                                             <input class="form-control" type="text" value="" id="market_global_location" name="market_global_location">
 
@@ -199,9 +199,33 @@
 
                                     <div class="tablehead">AUTHORIZATION CATEGORIES</div>
                                     <small class="text-muted">These are the authorization types for bottle usage. </small><br><br>
+                                    <?php if($_SESSION['role']=='super_admin'):?>
                                     <div class="radio  radio-custom">
 
-                                        <input type="radio" name="authorization_category" id="authorization_category" value="authorized_by_customer">
+                                            <input id="provitionally_approved_by_super_admin" type="radio" name="authorization" value="1">
+
+                                            <label for="provitionally_approved_by_super_admin">
+
+                                                Provisionally approved by Marketing and Communication
+
+                                            </label>
+
+                                        </div>
+                                    <div class="radio  radio-custom">
+
+                                            <input id="not_provitionally_approved_by_super_admin" type="radio" name="authorization" value="1">
+
+                                            <label for="not_provitionally_approved_by_super_admin">
+
+                                                Not Provisionally approved by Marketing and Communication
+
+                                            </label>
+
+                                        </div>
+                                    <?php endif;?>
+                                    <div class="radio  radio-custom">
+
+                                        <input type="radio" name="authorization" id="authorization_category" value="authorized_by_customer">
 
                                         <label for="authorization_category" class="authorized-customer">
 
@@ -213,7 +237,7 @@
 
                                     <div class="radio radio-custom">
 
-                                        <input type="radio" name="authorization_category" id="not_authorization_category" value="not_authorized_by_customer">
+                                        <input type="radio" name="authorization" id="not_authorization_category" value="not_authorized_by_customer">
 
                                         <label for="not_authorization_category" class="authorized-customer">
 
@@ -225,7 +249,7 @@
 
                                     <div class="radio  radio-custom">
 
-                                        <input type="radio" name="authorization_category" id="in_process_okay_to_use" value="in_process_okay_to_use" checked>
+                                        <input type="radio" name="authorization" id="in_process_okay_to_use" value="in_process_okay_to_use" checked>
 
                                         <label for="in_process_okay_to_use" class="in-progress-customer">
 
@@ -236,7 +260,7 @@
                                     </div>
                                     <div class="radio  radio-custom">
 
-                                        <input type="radio" name="authorization_category" id="in_process_dont_use" value="in_process_dont_use" checked>
+                                        <input type="radio" name="authorization" id="in_process_dont_use" value="in_process_dont_use" checked>
 
                                         <label for="in_process_dont_use" class="in-progress-customer">
 
@@ -246,9 +270,9 @@
 
                                     </div>
 
-                                    <div class="checkbox checkbox-primary">
+                                    <div class="radio  radio-custom">
 
-                                        <input id="pending_authorization_requested" type="checkbox" name="pending_authorization_requested" value='1'>
+                                        <input id="pending_authorization_requested" type="radio" name="authorization" value='1'>
 
                                         <label for="pending_authorization_requested">Pending Authorization Requested
 
@@ -279,30 +303,7 @@
                                         </label>
 
                                     </div>
-                                    <?php if($_SESSION['role']=='super_admin'):?>
-                                        <div class="checkbox checkbox-primary">
-
-                                            <input id="provitionally_approved_by_super_admin" type="checkbox" name="provitionally_approved_by_super_admin" value="1">
-
-                                            <label for="provitionally_approved_by_super_admin">
-
-                                                Provitionally approved by Diego
-
-                                            </label>
-
-                                        </div>
-                                        <div class="checkbox checkbox-primary">
-
-                                            <input id="not_provitionally_approved_by_super_admin" type="checkbox" name="not_provitionally_approved_by_super_admin" value="1">
-
-                                            <label for="not_provitionally_approved_by_super_admin">
-
-                                                Not Provitionally approved by Diego
-
-                                            </label>
-
-                                        </div>
-                                    <?php endif;?>
+                                    
 
                                     </div>
 
@@ -331,11 +332,11 @@
                                             </label>
 
                                         </div>
-
+<br>
                                         <h4>CUSTOM APPROVALS</h4>
                                         <div class="row">
                                             <div class="col-sm-6">
-                                                <small class="icon-20">Internal</small><br>
+                                                <div class="icon-20" style="padding-bottom:10px;font-weight:500" >INTERNAL</div>
                                                 <div class="checkbox checkbox-primary">
 
                                                     <input id="confidential_internal_event_presentations" name="confidential_internal_event_presentations" type="checkbox" class="confidential_category" value="1">
@@ -388,7 +389,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-sm-6">
-                                                <small class="icon-20">External</small><br>
+                                                <div class="icon-20" style="padding-bottom:10px;font-weight:500">EXTERNAL</div>
                                                 <div class="checkbox checkbox-primary">
 
                                                     <input id="confidential_external_event_and_expo_presentations" name="confidential_external_event_and_expo_presentations" type="checkbox" class="confidential_category" value="1">
@@ -508,7 +509,7 @@
 
         messages: {
 
-            'default': 'Drag and drop an image here or click',
+            'default': 'Drag and drop image here<BR>OR<BR>click to browse your files',
 
             'replace': 'Drag and drop or click to replace',
 
@@ -530,6 +531,51 @@
 
 <script>
 
+	 $("#confidential_internal_event_presentations").on("click",function(){
+		$( "#approve_all_confidential_category" ).prop( "checked", false );
+		$( "#custom_confidential_category" ).prop( "checked", false );
+    });
+	 $("#confidential_capability_center_specific").on("click",function(){
+		$( "#approve_all_confidential_category" ).prop( "checked", false );
+		$( "#custom_confidential_category" ).prop( "checked", false );
+    });
+	 $("#confidential_dmm_section_specific").on("click",function(){
+		$( "#approve_all_confidential_category" ).prop( "checked", false );
+		$( "#custom_confidential_category" ).prop( "checked", false );
+    });
+	 $("#confidential_summer_meeting_specific").on("click",function(){
+		$( "#approve_all_confidential_category" ).prop( "checked", false );
+		$( "#custom_confidential_category" ).prop( "checked", false );
+    });
+	 $("#confidential_ctm_meeting_specific").on("click",function(){
+		$( "#approve_all_confidential_category" ).prop( "checked", false );
+		$( "#custom_confidential_category" ).prop( "checked", false );
+    });
+	 $("#confidential_other_meetings").on("click",function(){
+		$( "#approve_all_confidential_category" ).prop( "checked", false );
+		$( "#custom_confidential_category" ).prop( "checked", false );
+    });
+	 $("#print_media_brochures_posters").on("click",function(){
+		$( "#approve_all_confidential_category" ).prop( "checked", false );
+		$( "#custom_confidential_category" ).prop( "checked", false );
+    });
+	 $("#confidential_external_event_and_expo_presentations").on("click",function(){
+		$( "#approve_all_confidential_category" ).prop( "checked", false );
+		$( "#custom_confidential_category" ).prop( "checked", false );
+    });
+	 $("#external_meetings_with_customers").on("click",function(){
+		$( "#approve_all_confidential_category" ).prop( "checked", false );
+		$( "#custom_confidential_category" ).prop( "checked", false );
+    });
+	 $("#online_website_social_media").on("click",function(){
+		$( "#approve_all_confidential_category" ).prop( "checked", false );
+		$( "#custom_confidential_category" ).prop( "checked", false );
+    });
+	 $("#print_media_brochures_posters_ads").on("click",function(){
+		$( "#approve_all_confidential_category" ).prop( "checked", false );
+		$( "#custom_confidential_category" ).prop( "checked", false );
+    });
+	
     $("#approve_all_confidential_category").on("click",function(){
 
         var fields = $(".confidential_category");
@@ -551,6 +597,34 @@
             $.each(fields, function(key,val){
 
                 $(val).prop('checked',false);;
+
+            });
+
+        }
+
+    });
+	
+	$("#custom_confidential_category").on("click",function(){
+
+        var fields = $(".confidential_category");
+
+        if($(this).is(":checked")){
+
+            
+
+            $.each(fields, function(key,val){
+
+                $(val).prop('checked',false);
+
+            });
+
+        }
+
+        else{
+
+            $.each(fields, function(key,val){
+
+                $(val).prop('checked',true);;
 
             });
 

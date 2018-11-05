@@ -2,7 +2,7 @@ body {
     font-size:1.0rem;
 }
 .admindashboard {
-    background-color: #727272;
+    background-color: #d6d6d6;
 }
 .card-box.tilebox-one a.waves-effect {
     max-height: 150px;
@@ -254,10 +254,3 @@ span.editlink {
     background-color:#64b0f2
 }
 
-/* image page style */
-.authorized-customer {
-    color: #0199d8;
-}
-.in-progress-customer {
-  color: #008743;
-}
