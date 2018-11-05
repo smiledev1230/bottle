@@ -517,7 +517,7 @@
 
         messages: {
 
-            'default': 'Drag and drop image here<BR>OR<BR>click to browse your files',
+            'default': 'Drag and drop image here<BR>OR<BR>Click to browse your files',
 
             'replace': 'Drag and drop or click to replace',
 

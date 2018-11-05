@@ -426,6 +426,11 @@ class Image_model extends CI_Model{
             'ctm_meeting_specific' => isset($data['confidential_ctm_meeting_specific'])?1:0,
 
             'other_meetings' => isset($data['confidential_other_meetings'])?1:0,
+            'print_media_brochures_posters' => isset($data['print_media_brochures_posters'])?1:0,
+            'confidential_external_event_and_expo_presentations' => isset($data['confidential_external_event_and_expo_presentations'])?1:0,
+            'external_meetings_with_customers' => isset($data['external_meetings_with_customers'])?1:0,
+            'online_website_social_media' => isset($data['online_website_social_media'])?1:0,
+            'print_media_brochures_posters_ads' => isset($data['print_media_brochures_posters_ads'])?1:0,
 
         );
 
@@ -607,7 +612,11 @@ class Image_model extends CI_Model{
             'ctm_meeting_specific' => isset($data['confidential_ctm_meeting_specific'])?1:0,
 
             'other_meetings' => isset($data['confidential_other_meetings'])?1:0,
-
+            'print_media_brochures_posters' => isset($data['print_media_brochures_posters'])?1:0,
+            'confidential_external_event_and_expo_presentations' => isset($data['confidential_external_event_and_expo_presentations'])?1:0,
+            'external_meetings_with_customers' => isset($data['external_meetings_with_customers'])?1:0,
+            'online_website_social_media' => isset($data['online_website_social_media'])?1:0,
+            'print_media_brochures_posters_ads' => isset($data['print_media_brochures_posters_ads'])?1:0,
         );
 
 

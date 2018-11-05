@@ -216,206 +216,184 @@
 
                                 <div class="card-box">
 
-                                            <h4>AUTHORIZATION CATEGORIES</h4>
-                                            <small class="text-muted">These are the authorization types for bottle usage. </small><br>
-                                            <div class="radio  radio-custom">
+                                    <h4>AUTHORIZATION CATEGORIES</h4>
+                                    <small class="text-muted">These are the authorization types for bottle usage. </small><br>
+                                    <div class="radio  radio-custom">
 
-                                                <input type="radio" name="authorization_category" id="authorization_category" value="authorized_by_customer" <?php if(@$authorization->status=='authorized_by_customer'){ echo 'checked';}?>>
+                                        <input type="radio" name="authorization_category" id="authorization_category" value="authorized_by_customer" <?php if(@$authorization->status=='authorized_by_customer'){ echo 'checked';}?>>
 
-                                                <label for="authorization_category" class="authorized-customer">
+                                        <label for="authorization_category" class="authorized-customer">
 
-                                                    Authorized by Customer (okay to use)
+                                            Authorized by Customer (okay to use)
 
-                                                </label>
+                                        </label>
 
-                                            </div>
+                                    </div>
 
-                                            
+                                    <div class="radio radio-custom">
 
-                                            <div class="radio radio-custom">
+                                        <input type="radio" name="authorization_category" id="not_authorization_category" value="not_authorized_by_customer" <?php if(@$authorization->status=='not_authorized_by_customer'){ echo 'checked';}?>>
 
-                                                <input type="radio" name="authorization_category" id="not_authorization_category" value="not_authorized_by_customer" <?php if(@$authorization->status=='not_authorized_by_customer'){ echo 'checked';}?>>
+                                        <label for="not_authorization_category" class="authorized-customer">
 
-                                                <label for="not_authorization_category" class="authorized-customer">
+                                            Not Authorized by Customer (do not use)
 
-                                                    Not Authorized by Customer (do not use)
+                                        </label>
 
-                                                </label>
+                                    </div>
 
-                                            </div>
+                                    <div class="radio  radio-custom">
 
-                                            <div class="radio  radio-custom">
+                                        <input type="radio" name="authorization_category" id="in_process_okay_to_use" value="in_process_okay_to_use"  <?php if(@$authorization->status=='in_process_okay_to_use'){ echo 'checked';}?>>
 
-                                                <input type="radio" name="authorization_category" id="in_process_okay_to_use" value="in_process_okay_to_use"  <?php if(@$authorization->status=='in_process_okay_to_use'){ echo 'checked';}?>>
+                                        <label for="in_process_okay_to_use" class="in-progress-customer">
 
-                                                <label for="in_process_okay_to_use" class="in-progress-customer">
+                                            In Process to be Authorized by Customer (okay to use)
 
-                                                    In Process to be Authorized by Customer (okay to use)
+                                        </label>
 
-                                                </label>
+                                    </div>
+                                    <div class="radio  radio-custom">
 
-                                            </div>
-                                            <div class="radio  radio-custom">
+                                        <input type="radio" name="authorization_category" id="in_process_dont_use" value="in_process_dont_use"  <?php if(@$authorization->status=='in_process_dont_use'){ echo 'checked';}?>>
 
-                                                <input type="radio" name="authorization_category" id="in_process_dont_use" value="in_process_dont_use"  <?php if(@$authorization->status=='in_process_dont_use'){ echo 'checked';}?>>
+                                        <label for="in_process_dont_use" class="in-progress-customer">
 
-                                                <label for="in_process_dont_use" class="in-progress-customer">
+                                            In Process to be Authorized by Customer (okay to use)
 
-                                                    In Process to be Authorized by Customer (okay to use)
+                                        </label>
 
-                                                </label>
+                                    </div>
 
-                                            </div>
+                                    <div class="checkbox checkbox-primary">
 
-                                            <div class="checkbox checkbox-primary">
+                                        <input id="authorized_by_marketing" type="checkbox" name="authorized_by_marketing" value='1' <?php if(@$image->authorized_by_marketing=='1'){ echo 'checked';}?>>
 
-                                                <input id="authorized_by_marketing" type="checkbox" name="authorized_by_marketing" value='1' <?php if(@$image->authorized_by_marketing=='1'){ echo 'checked';}?>>
+                                        <label for="authorized_by_marketing">
 
-                                                <label for="authorized_by_marketing">
+                                            Authorized by  Marketing
 
-                                                    Authorized by  Marketing
+                                        </label>
 
-                                                </label>
+                                    </div>
 
-                                            </div>
+                                    <div class="checkbox checkbox-primary">
 
-                                            <div class="checkbox checkbox-primary">
+                                        <input id="authorized_by_legal" type="checkbox" name="authorized_by_legal" value="1" <?php if(@$image->authorized_by_legal=='1'){ echo 'checked';}?>>
 
-                                                <input id="authorized_by_legal" type="checkbox" name="authorized_by_legal" value="1" <?php if(@$image->authorized_by_legal=='1'){ echo 'checked';}?>>
+                                        <label for="authorized_by_legal">
 
-                                                <label for="authorized_by_legal">
+                                            Authorized by Legal 
 
-                                                    Authorized by Legal 
+                                        </label>
 
-                                                </label>
+                                    </div>
 
-                                            </div>
+                                    <?php if($_SESSION['role']=='super_admin'):?>
+                                        <div class="checkbox checkbox-primary">
 
-                                            <?php if($_SESSION['role']=='super_admin'):?>
-                                                <div class="checkbox checkbox-primary">
+                                            <input id="provitionally_approved_by_super_admin" type="checkbox" name="provitionally_approved_by_super_admin" value="1"  <?php if(@$image->provitionally_approved_by_super_admin=='1'){ echo 'checked';}?>>
 
-                                                    <input id="provitionally_approved_by_super_admin" type="checkbox" name="provitionally_approved_by_super_admin" value="1"  <?php if(@$image->provitionally_approved_by_super_admin=='1'){ echo 'checked';}?>>
+                                            <label for="provitionally_approved_by_super_admin">
 
-                                                    <label for="provitionally_approved_by_super_admin">
+                                                Provitionally approved by Diego
 
-                                                        Provitionally approved by Diego
+                                            </label>
 
-                                                    </label>
+                                        </div>
+                                        <div class="checkbox checkbox-primary">
 
-                                                </div>
-                                                <div class="checkbox checkbox-primary">
+                                            <input id="not_provitionally_approved_by_super_admin" type="checkbox" name="not_provitionally_approved_by_super_admin" value="1" <?php if(@$image->not_provitionally_approved_by_super_admin=='1'){ echo 'checked';}?>>
 
-                                                    <input id="not_provitionally_approved_by_super_admin" type="checkbox" name="not_provitionally_approved_by_super_admin" value="1" <?php if(@$image->not_provitionally_approved_by_super_admin=='1'){ echo 'checked';}?>>
+                                            <label for="not_provitionally_approved_by_super_admin">
 
-                                                    <label for="not_provitionally_approved_by_super_admin">
+                                                Not Provitionally approved by Diego
 
-                                                        Not Provitionally approved by Diego
+                                            </label>
 
-                                                    </label>
-
-                                                </div>
-                                            <?php endif;?>
+                                        </div>
+                                    <?php endif;?>
 
                                     </div>
 
                                 </div>
 
-                                
+                                <div class="col-md-8">
+                                    <div class="card-box">
 
-                                <div class="col-sm-4">
+                                        <div class="tablehead">APPROVALS FOR MEDIA USAGE</div>
+                                        <small class="text-muted">Check all that apply. </small><br><br>
+                                        
+                                        <div class="radio  radio-custom">
 
-                                        <div class="card-box">
+                                            <input id="approve_all_confidential_category" name="approve_all_confidential_category" type="radio"  >
 
-                                                <h4>CONFIDENTIAL CATEGORY</h4>
+                                            <label for="approve_all_confidential_category" data-toggle="tooltip" data-placement="top" title="" data-original-title="Approve all (okay to use)">Approve all (okay to use)
+                                            </label>
 
-                                                <div class="checkbox checkbox-primary">
+                                        </div>
 
-                                                    <input id="approve_all_confidential_category" type="checkbox"  >
+                                        <div class="radio  radio-custom">
 
-                                                    <label for="approve_all_confidential_category" data-toggle="tooltip" data-placement="top" title="" data-original-title="Approve all categories  (it will check all the boxes)">APPROVE ALL
+                                            <input id="custom_confidential_category" name="approve_all_confidential_category" type="radio"  >
 
-                                                    </label>
+                                            <label for="custom_confidential_category" data-toggle="tooltip" data-placement="top" title="" data-original-title="Confidential (do not use)">Confidential (do not use)
+                                            </label>
 
-                                                </div>
-
+                                        </div>
+<br>
+                                        <h4>CUSTOM APPROVALS</h4>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="icon-20" style="padding-bottom:10px;font-weight:500" >INTERNAL</div>
                                                 <div class="checkbox checkbox-primary">
 
                                                     <input id="confidential_internal_event_presentations" name="confidential_internal_event_presentations" type="checkbox" class="confidential_category" value="1" <?php if(@$confidential->internal_event_presentations=='1'){ echo 'checked';}?>>
-
-                                                    <label for="confidential_internal_event_presentations">Internal Event Presentations
-
+                                                    <label for="confidential_internal_event_presentations">Internal Event Presentations / Communications
                                                     </label>
 
                                                 </div>
-
-                                                <div class="checkbox checkbox-primary">
-
-                                                    <input id="confidential_external_event_and_expo_presentations" name="confidential_external_event_and_expo_presentations" type="checkbox" class="confidential_category" value="1" <?php if(@$confidential->external_event_and_expo_presentations=='1'){ echo 'checked';}?>>
-
-                                                    <label for="confidential_external_event_and_expo_presentations">
-
-                                                        External Event and Expo Presentations
-
-                                                    </label>
-
-                                                </div>
-
                                                 <div class="checkbox checkbox-primary">
 
                                                     <input id="confidential_capability_center_specific" name="confidential_capability_center_specific" type="checkbox" class="confidential_category" value="1" <?php if(@$confidential->capability_center_specific=='1'){ echo 'checked';}?>>
-
-                                                    <label for="confidential_capability_center_specific">
-
-                                                        Capability Center Specific
-
+                                                    <label for="confidential_capability_center_specific">Capability Center Specific
                                                     </label>
 
                                                 </div>
-
                                                 <div class="checkbox checkbox-primary">
 
                                                     <input id="confidential_dmm_section_specific" name="confidential_dmm_section_specific" type="checkbox" class="confidential_category" value='1' <?php if(@$confidential->dmm_section_specific=='1'){ echo 'checked';}?>>
-
-                                                    <label for="confidential_dmm_section_specific">
-
-                                                        DMM Section Specific
-
+                                                    <label for="confidential_dmm_section_specific">DMM Specific
                                                     </label>
 
                                                 </div>
-
                                                 <div class="checkbox checkbox-primary">
 
                                                     <input id="confidential_summer_meeting_specific" name="confidential_summer_meeting_specific" type="checkbox" class="confidential_category" value='1' <?php if(@$confidential->summer_meeting_specific=='1'){ echo 'checked';}?>>
-
-                                                    <label for="confidential_summer_meeting_specific">
-
-                                                        Summer Meeting Specific
-
+                                                    <label for="confidential_summer_meeting_specific">Summer Meeting Specific
                                                     </label>
 
                                                 </div>
-
                                                 <div class="checkbox checkbox-primary">
 
                                                     <input id="confidential_ctm_meeting_specific" name="confidential_ctm_meeting_specific" type="checkbox" class="confidential_category" value='1' <?php if(@$confidential->ctm_meeting_specific=='1'){ echo 'checked';}?>>
-
-                                                    <label for="confidential_ctm_meeting_specific">
-
-                                                        CTM Meeting Specific
-
+                                                    <label for="confidential_ctm_meeting_specific">CTM Meeting Specific
                                                     </label>
 
                                                 </div>
 
                                                 <div class="checkbox checkbox-primary">
 
-                                                    <input id="confidential_other_meetings" name="confidential_other_meetings" type="checkbox" class="" value='1' <?php if(@$confidential->other_meetings=='1'){ echo 'checked';}?>>
+                                                    <input id="print_media_brochures_posters" name="print_media_brochures_posters" type="checkbox" class="confidential_category" value='1' <?php if(@$confidential->print_media_brochures_posters=='1'){ echo 'checked';}?>>
+                                                    <label for="print_media_brochures_posters">Print Media (brochures, posters) 
+                                                    </label>
 
-                                                    <label for="confidential_other_meetings">
+                                                </div>
 
-                                                            Other Meetings 
+                                                <div class="checkbox checkbox-primary">
 
+                                                    <input id="confidential_other_meetings" name="confidential_other_meetings" type="checkbox" class="confidential_category" value='1' <?php if(@$confidential->other_meetings=='1'){ echo 'checked';}?>>
+                                                    <label for="confidential_other_meetings">Other Meetings 
                                                     </label>
 
                                                 </div>
@@ -426,124 +404,46 @@
 
                                                 </div>
 
-                                        </div>
-
-                                    </div>
-
-                                    
-
-                                <div class="col-sm-4">
-
-                                        
-
-                                        <div class="card-box">
-
-                                                <h4>NON CONFIDENTIAL CATEGORY</h4>
-
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="icon-20" style="padding-bottom:10px;font-weight:500">EXTERNAL</div>
                                                 <div class="checkbox checkbox-primary">
 
-                                                    <input id="approve_all_non_confidential_category" type="checkbox"  >
-
-                                                    <label for="approve_all_non_confidential_category" data-toggle="tooltip" data-placement="top" title="" data-original-title="Approve all categories  (it will check all the boxes)">APPROVE ALL
-
-                                                    </label>
-
-                                                </div>
-
-                                                <div class="checkbox checkbox-primary">
-
-                                                    <input id="non_confidential_internal_event_presentations" name="non_confidential_internal_event_presentations" type="checkbox" class="non_confidential_category" value="1" <?php if(@$non_confidential->internal_event_presentations=='1'){ echo 'checked';}?>>
-
-                                                    <label for="non_confidential_internal_event_presentations">Internal Event Presentations / Communications
-
-                                                    </label>
-
-                                                </div>
-
-                                                <div class="checkbox checkbox-primary">
-
-                                                    <input id="non_confidential_external_event_and_expo_presentations" name="non_confidential_external_event_and_expo_presentations" type="checkbox" class="non_confidential_category" value="1" <?php if(@$non_confidential->external_event_and_expo_presentations=='1'){ echo 'checked';}?>>
-
-                                                    <label for="non_confidential_external_event_and_expo_presentations">
-
+                                                    <input id="confidential_external_event_and_expo_presentations" name="confidential_external_event_and_expo_presentations" type="checkbox" class="confidential_category" value="1" <?php if(@$confidential->external_event_and_expo_presentations=='1'){ echo 'checked';}?>>
+                                                    <label for="confidential_external_event_and_expo_presentations">
                                                         External Event and Expo Presentations / Communications
-
                                                     </label>
 
                                                 </div>
-
                                                 <div class="checkbox checkbox-primary">
 
-                                                    <input id="non_confidential_capability_center_specific" name="non_confidential_capability_center_specific" type="checkbox" class="non_confidential_category" value="1" <?php if(@$non_confidential->capability_center_specific=='1'){ echo 'checked';}?>>
-
-                                                    <label for="non_confidential_capability_center_specific">
-
-                                                        Capability Center Specific
-
+                                                    <input id="external_meetings_with_customers" name="external_meetings_with_customers" type="checkbox" class="confidential_category" value="1" <?php if(@$confidential->external_meetings_with_customers=='1'){ echo 'checked';}?>>
+                                                    <label for="external_meetings_with_customers">
+                                                        External Meetings with Customers
                                                     </label>
 
                                                 </div>
-
                                                 <div class="checkbox checkbox-primary">
 
-                                                    <input id="non_confidential_dmm_section_specific" name="non_confidential_dmm_section_specific" type="checkbox" class="non_confidential_category" value='1' <?php if(@$non_confidential->dmm_section_specific=='1'){ echo 'checked';}?>>
-
-                                                    <label for="non_confidential_dmm_section_specific">
-
-                                                        DMM Section Specific
-
+                                                    <input id="online_website_social_media" name="online_website_social_media" type="checkbox" class="confidential_category" value="1" <?php if(@$confidential->online_website_social_media=='1'){ echo 'checked';}?>>
+                                                    <label for="online_website_social_media">
+                                                        Online (website, social media)
                                                     </label>
 
                                                 </div>
-
                                                 <div class="checkbox checkbox-primary">
 
-                                                    <input id="non_confidential_summer_meeting_specific" name="non_confidential_summer_meeting_specific" type="checkbox" class="non_confidential_category" value='1' <?php if(@$non_confidential->summer_meeting_specific=='1'){ echo 'checked';}?>>
-
-                                                    <label for="non_confidential_summer_meeting_specific">
-
-                                                        Summer Meeting Specific
-
+                                                    <input id="print_media_brochures_posters_ads" name="print_media_brochures_posters_ads" type="checkbox" class="confidential_category" value="1" <?php if(@$confidential->print_media_brochures_posters_ads=='1'){ echo 'checked';}?>>
+                                                    <label for="print_media_brochures_posters_ads">
+                                                        Print Media (brochures, posters, magazine ads)
                                                     </label>
 
                                                 </div>
-
-                                                <div class="checkbox checkbox-primary">
-
-                                                    <input id="non_confidential_ctm_meeting_specific" name="non_confidential_ctm_meeting_specific" type="checkbox" class="non_confidential_category" value='1' <?php if(@$non_confidential->ctm_meeting_specific=='1'){ echo 'checked';}?>>
-
-                                                    <label for="non_confidential_ctm_meeting_specific">
-
-                                                        CTM Meeting Specific
-
-                                                    </label>
-
-                                                </div>
-
-                                                <div class="checkbox checkbox-primary">
-
-                                                    <input id="non_confidential_other_meetings" name="non_confidential_other_meetings" type="checkbox" class="" value='1' <?php if(@$non_confidential->other_meetings=='1'){ echo 'checked';}?>>
-
-                                                    <label for="non_confidential_other_meetings">
-
-                                                            Other Meetings 
-
-                                                    </label>
-
-                                                </div>
-
-                                                <div>
-
-                                                    <input type="text" name="non_confidential_other_meetings_info" id="non_confidential_other_meetings_info" <?php if(@$non_confidential->other_meetings!='1'){ echo 'style="display:none;"';}?>  placeholder="Other meetings info"  class="form-control">
-
-                                                </div>
-
+                                            </div>
                                         </div>
-
                                     </div>
 
-                                    
-
+                                </div>
                         </div>
 
                         <!-- categories section -->
@@ -756,63 +656,53 @@
 
 <script>
 
+     $("#confidential_internal_event_presentations, #confidential_capability_center_specific, #confidential_dmm_section_specific, #confidential_summer_meeting_specific, #confidential_ctm_meeting_specific, #confidential_other_meetings, #print_media_brochures_posters, #confidential_external_event_and_expo_presentations, #external_meetings_with_customers, #online_website_social_media, #print_media_brochures_posters_ads").on("click",function(){
+        $( "#approve_all_confidential_category" ).prop( "checked", false );
+        $( "#custom_confidential_category" ).prop( "checked", false );
+    });
+    
     $("#approve_all_confidential_category").on("click",function(){
-
         var fields = $(".confidential_category");
-
         if($(this).is(":checked")){
-
-            
-
             $.each(fields, function(key,val){
-
                 $(val).prop('checked',true);
-
             });
-
-        }
-
-        else{
-
+            $("#confidential_other_meetings_info").show();
+        } else{
             $.each(fields, function(key,val){
-
                 $(val).prop('checked',false);;
-
             });
-
+            $("#confidential_other_meetings_info").hide();
         }
-
+    });
+    
+    $("#custom_confidential_category").on("click",function(){
+        var fields = $(".confidential_category");
+        if($(this).is(":checked")){
+            $.each(fields, function(key,val){
+                $(val).prop('checked',false);
+            });
+            $("#confidential_other_meetings_info").hide();
+        } else{
+            $.each(fields, function(key,val){
+                $(val).prop('checked',true);;
+            });
+            $("#confidential_other_meetings_info").show();
+        }
     });
 
     $("#approve_all_non_confidential_category").on("click",function(){
-
         var fields = $(".non_confidential_category");
-
         if($(this).is(":checked")){
-
-            
-
             $.each(fields, function(key,val){
-
                 $(val).prop('checked',true);
-
             });
-
-        }
-
-        else{
-
+        } else{
             $.each(fields, function(key,val){
-
                 $(val).prop('checked',false);;
-
             });
-
         }
-
     });
-
-
 
     function populate_selected_users(){
         var fields = $(".admin-checkbox");
