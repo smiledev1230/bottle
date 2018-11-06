@@ -271,4 +271,16 @@ span.editlink {
     font-size: 14px;
     color: #fff;
     padding: 25px 0px 0px 15px;
+    position: absolute;
+    max-width: calc(100% - 80px);
+}
+@media (max-width: 768px) {
+  .topbar-label {
+      display: none;
+  }
+  .topbar .navbar-custom .list-inline {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+  }
 }
