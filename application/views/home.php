@@ -85,7 +85,7 @@
 
                                 <div class="custom-modal-text">
 
-                                    <p>Before we authorize the download, please fill in the information required and tell us how will you use the bottle.</p>
+                                    <p>Before we authorize the download, please fill out the required information and tell us how you will use the bottle image.</p>
 
                                     <form action="">
 

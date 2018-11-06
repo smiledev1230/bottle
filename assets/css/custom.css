@@ -267,3 +267,8 @@ span.editlink {
 .radio.radio-custom input[type="radio"], .checkbox.checkbox-primary input[type="checkbox"] {
     position: absolute;
 }
+.topbar-label {
+    font-size: 14px;
+    color: #fff;
+    padding: 25px 0px 0px 15px;
+}
