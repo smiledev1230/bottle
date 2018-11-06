@@ -40,42 +40,47 @@
                             </div>
 
                         </div>
-                        <div class="card-box">
-                        <div class="row">
-                            <div class="col-md-12">
-                                
-                                <table class="table table-bordered table-striped">
-                                    <thead>
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Email</th>
-                                            <th>Bottle Name</th>
-                                            <th>Used for</th>
-                                            <th>Download Date</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <?php foreach($results as $row):?>
-                                            <tr>
-                                                <td><?php echo $row->name;?></td>
-                                                <td><?php echo $row->email;?></td>
-                                                <td>
-                                                    <?php $load_url = base_url()."ajax/modal?m=image-details&id=".$row->image_id;;?>
-                                                    <a href="#preview-bottle-modal" class="waves-effect waves-light" onclick="load_preview_modal('<?php echo $load_url;?>')" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="200" data-overlaycolor="#36404a">
-                                                        <?php echo $row->bottle_name;?>
-                                                    </a>
-                                                    
-                                                </td>
-                                                <td><?php echo $row->used_for;?></td>
-                                                <td><?php echo date("Y-m-d",strtotime($row->created_at)) ;?></td>
-                                            </tr>
-                                        <?php endforeach;?>
-                                    </tbody>
-                                </table>
+                        <?php if (sizeof($results) <= 0):?>
+                            <div class="row">
+                                <p>You have not downloaded any images yet.</p>
                             </div>
-                        </div>
-                        </div>
-
+                        <?php else:?>
+                            <div class="card-box">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        
+                                        <table class="table table-bordered table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Email</th>
+                                                    <th>Bottle Name</th>
+                                                    <th>Used for</th>
+                                                    <th>Download Date</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <?php foreach($results as $row):?>
+                                                    <tr>
+                                                        <td><?php echo $row->name;?></td>
+                                                        <td><?php echo $row->email;?></td>
+                                                        <td>
+                                                            <?php $load_url = base_url()."ajax/modal?m=image-details&id=".$row->image_id;;?>
+                                                            <a href="#preview-bottle-modal" class="waves-effect waves-light" onclick="load_preview_modal('<?php echo $load_url;?>')" data-animation="fadein" data-plugin="custommodal" data-overlayspeed="200" data-overlaycolor="#36404a">
+                                                                <?php echo $row->bottle_name;?>
+                                                            </a>
+                                                            
+                                                        </td>
+                                                        <td><?php echo $row->used_for;?></td>
+                                                        <td><?php echo date("Y-m-d",strtotime($row->created_at)) ;?></td>
+                                                    </tr>
+                                                <?php endforeach;?>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php endif;?>
                     </div> <!-- container -->
 
 
