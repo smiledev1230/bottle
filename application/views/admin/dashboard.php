@@ -29,6 +29,21 @@
                 <div class="content admindashboard">
 
                     <div class="container-fluid">
+                        <div class="row">
+
+                            <div class="col-xl-12">
+
+                                <div class="page-title-box">
+
+                                    <h4 class="page-title float-left">Administrator Dashboard | View and manage bottle images here.</h4>
+
+                                    <div class="clearfix"></div>
+
+                                </div>
+
+                            </div>
+
+                        </div>                        
 
                             <div class="tilebox-one">
 
@@ -36,7 +51,7 @@
 
                                     <div class="col-sm-12">
 
-                                        <p>Click on the bottle image to preview the bottle information. Click on the edit icon to edit. Click download to download the image</p>
+                                        <p>Click on the bottle image to preview the bottle information. Click on the edit icon to edit. Click on the download button to download the image.</p>
 
                                         <?php if(isset($_SESSION['success'])):?>
 
