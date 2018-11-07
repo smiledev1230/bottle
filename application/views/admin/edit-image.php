@@ -287,9 +287,7 @@
 
                                             <input id="provitionally_approved_by_super_admin" type="checkbox" name="provitionally_approved_by_super_admin" value="1"  <?php if(@$image->provitionally_approved_by_super_admin=='1'){ echo 'checked';}?>>
 
-                                            <label for="provitionally_approved_by_super_admin">
-
-                                                Provisionally approved by the Marketing and Communications Department
+                                            <label for="provitionally_approved_by_super_admin" data-toggle="tooltip" data-placement="top" title="" data-original-title="This means the bottle was previously approved for Pursuits on the website, so the bottle has temporary approval. Please disapprove if not allowed for use.">Provisionally approved by the Marketing and Communications Department
 
                                             </label>
 
@@ -481,7 +479,7 @@
 
                         <div class="card-box" style="margin-top:10px">
 
-                                    <h4>Contact Administrator Team</h4>
+                                    <h4>Contact Administrative Team</h4>
 
                                     <small>Select the Administrator you wish to contact. Then click on the "Contact" button.</small>
 
