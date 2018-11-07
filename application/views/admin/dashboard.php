@@ -53,26 +53,6 @@
 
                                         <p>Click on the bottle image to preview the bottle information. Click on the edit icon to edit. Click on the download button to download the image.</p>
 
-                                        <?php if(isset($_SESSION['success'])):?>
-
-                                            <div class="alert alert-success alert-dismissible fade show" role="alert">
-
-                                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-
-                                                    <span aria-hidden="true">×</span>
-
-                                                </button>
-
-                                                <div>
-
-                                                    <?php echo @$_SESSION['success'];unset($_SESSION['success']);?>
-
-                                                </div>
-
-                                            </div>
-
-                                        <?php endif;?>
-
                                         <?php if(isset($_SESSION['error'])):?>
 
                                             <div class="alert alert-danger alert-dismissible fade show" role="alert">
