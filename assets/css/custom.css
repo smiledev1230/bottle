@@ -268,15 +268,27 @@ span.editlink {
     position: absolute;
 }
 .topbar-label {
-    font-size: 14px;
-    color: #fff;
-    padding: 25px 0px 0px 15px;
     position: absolute;
     max-width: calc(100% - 80px);
+    padding-left: 10px;
+    font-size: 14px;
+    color: #fff;
+    line-height: 70px;
+}
+.topbar-label span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
 }
 @media (max-width: 768px) {
-  .topbar-label {
+  #wrapper .topbar .topbar-left {
       display: none;
+  }  
+  #wrapper .navbar-custom {
+      margin-left: 0px !important;
+  }
+  .topbar-label {
+      padding-left: 50px;
   }
   .topbar .navbar-custom .list-inline {
       position: absolute;

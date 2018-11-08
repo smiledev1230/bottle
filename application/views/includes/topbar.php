@@ -20,7 +20,7 @@
                 <?php if ($page === 'home'):?>
                     <p class="topbar-label">Welcome to Bottle Tracker, where you can browse approved and unapproved product images.</p>
                 <?php else:?>
-                    <p class="topbar-label">You are logged in as an administrator on Bottle Tracker.</p>
+                    <div class="topbar-label"><span>You are logged in as an administrator on Bottle Tracker.</span></div>
                 <?php endif;?>
                 <button class="button-menu-mobile open-left waves-light waves-effect d-block d-md-none">
                                 <i class="zmdi zmdi-menu"></i>
